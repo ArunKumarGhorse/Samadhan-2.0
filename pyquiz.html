@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .question p {
+            font-weight: bold;
+            margin-top: 0;
+            color: #007bff;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .options label:hover {
+            background-color: #dcdcdc;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto 0;
+            padding: 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🐍 Python Basics Quiz (20 Questions)</h1>
+        <p style="text-align: center; font-size: 1.1em;">Each question is worth 5 points. You will receive your score out of 100 upon completion!</p>
+
+        <form id="quiz-form">
+            <div class="language-section">
+
+                <div class="question">
+                    <p>1. What is the output of `print(type((1,)))` in Python?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python1" value="a"> A. &lt;class 'list'&gt;</label>
+                        <label><input type="radio" name="python1" value="b"> B. &lt;class 'tuple'&gt;</label>
+                        <label><input type="radio" name="python1" value="c"> C. &lt;class 'int'&gt;</label>
+                        <label><input type="radio" name="python1" value="d"> D. &lt;class 'set'&gt;</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. What is the output of `10 // 3`?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python2" value="a"> A. 3.333</label>
+                        <label><input type="radio" name="python2" value="b"> B. 3</label>
+                        <label><input type="radio" name="python2" value="c"> C. 1</label>
+                        <label><input type="radio" name="python2" value="d"> D. 3.0</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>3. Which keyword is used to modify a global variable inside a function?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python3" value="a"> A. `local`</label>
+                        <label><input type="radio" name="python3" value="b"> B. `extern`</label>
+                        <label><input type="radio" name="python3" value="c"> C. `global`</label>
+                        <label><input type="radio" name="python3" value="d"> D. `var`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Which data structure in Python is **immutable**?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python4" value="a"> A. List</label>
+                        <label><input type="radio" name="python4" value="b"> B. Dictionary</label>
+                        <label><input type="radio" name="python4" value="c"> C. Set</label>
+                        <label><input type="radio" name="python4" value="d"> D. Tuple</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>5. What values will `range(1, 5)` generate?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python5" value="a"> A. 0, 1, 2, 3, 4</label>
+                        <label><input type="radio" name="python5" value="b"> B. 1, 2, 3, 4</label>
+                        <label><input type="radio" name="python5" value="c"> C. 1, 2, 3, 4, 5</label>
+                        <label><input type="radio" name="python5" value="d"> D. 2, 3, 4</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>6. Which of the following is an example of an **f-string**?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python6" value="a"> A. `f"Hello {name}"`</label>
+                        <label><input type="radio" name="python6" value="b"> B. `F'Hello {name}'`</label>
+                        <label><input type="radio" name="python6" value="c"> C. `format("Hello {}", name)`</label>
+                        <label><input type="radio" name="python6" value="d"> D. `str("Hello %s" % name)`</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>7. Which Python object **cannot** be a key in a Dictionary?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python7" value="a"> A. String</label>
+                        <label><input type="radio" name="python7" value="b"> B. Tuple</label>
+                        <label><input type="radio" name="python7" value="c"> C. Integer</label>
+                        <label><input type="radio" name="python7" value="d"> D. List</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>8. Which keyword is used in Python instead of `else if`?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python8" value="a"> A. `elseif`</label>
+                        <label><input type="radio" name="python8" value="b"> B. `elif`</label>
+                        <label><input type="radio" name="python8" value="c"> C. `else if`</label>
+                        <label><input type="radio" name="python8" value="d"> D. `otherwise`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>9. If a function does not explicitly **return** a value, what does it return by default?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python9" value="a"> A. Empty string (`""`)</label>
+                        <label><input type="radio" name="python9" value="b"> B. `0`</label>
+                        <label><input type="radio" name="python9" value="c"> C. `False`</label>
+                        <label><input type="radio" name="python9" value="d"> D. `None`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>10. An object instantiated from a class is referred to as a/an:</p>
+                    <div class="options">
+                        <label><input type="radio" name="python10" value="a"> A. Method</label>
+                        <label><input type="radio" name="python10" value="b"> B. Instance</label>
+                        <label><input type="radio" name="python10" value="c"> C. Attribute</label>
+                        <label><input type="radio" name="python10" value="d"> D. Blueprint</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>11. Which method is used to add an element to the **end** of a List?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python11" value="a"> A. `insert()`</label>
+                        <label><input type="radio" name="python11" value="b"> B. `push()`</label>
+                        <label><input type="radio" name="python11" value="c"> C. `add_last()`</label>
+                        <label><input type="radio" name="python11" value="d"> D. `append()`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>12. What is the key characteristic of the **Set** data type?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python12" value="a"> A. It stores key-value pairs.</label>
+                        <label><input type="radio" name="python12" value="b"> B. Its elements are indexed.</label>
+                        <label><input type="radio" name="python12" value="c"> C. It does not allow duplicate elements.</label>
+                        <label><input type="radio" name="python12" value="d"> D. It is immutable.</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>13. Which block is used to handle runtime errors in Python?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python13" value="a"> A. `try-catch`</label>
+                        <label><input type="radio" name="python13" value="b"> B. `error-handle`</label>
+                        <label><input type="radio" name="python13" value="c"> C. `try-except`</label>
+                        <label><input type="radio" name="python13" value="d"> D. `check-error`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>14. What is the output of the list slicing `[10, 20, 30, 40][1:3]`?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python14" value="a"> A. `[10, 20, 30]`</label>
+                        <label><input type="radio" name="python14" value="b"> B. `[20, 30]`</label>
+                        <label><input type="radio" name="python14" value="c"> C. `[20, 30, 40]`</label>
+                        <label><input type="radio" name="python14" value="d"> D. `[10, 20]`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>15. Which symbol is used to start a single-line comment in Python?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python15" value="a"> A. `//`</label>
+                        <label><input type="radio" name="python15" value="b"> B. `/*`</label>
+                        <label><input type="radio" name="python15" value="c"> C. `//`</label>
+                        <label><input type="radio" name="python15" value="d"> D. `#`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>16. What is the correct syntax to import all functions from a module?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python16" value="a"> A. `import module_name all`</label>
+                        <label><input type="radio" name="python16" value="b"> B. `from module_name import *`</label>
+                        <label><input type="radio" name="python16" value="c"> C. `include module_name`</label>
+                        <label><input type="radio" name="python16" value="d"> D. `use module_name`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>17. Which keyword is used to create a small, **anonymous** function in Python?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python17" value="a"> A. `def`</label>
+                        <label><input type="radio" name="python17" value="b"> B. `func`</label>
+                        <label><input type="radio" name="python17" value="c"> C. `lambda`</label>
+                        <label><input type="radio" name="python17" value="d"> D. `anon`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>18. What is the result of the boolean expression `True and False`?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python18" value="a"> A. `True`</label>
+                        <label><input type="radio" name="python18" value="b"> B. `False`</label>
+                        <label><input type="radio" name="python18" value="c"> C. `None`</label>
+                        <label><input type="radio" name="python18" value="d"> D. Error</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>19. Which function is used to convert the string `"123"` into an Integer?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python19" value="a"> A. `str_to_int()`</label>
+                        <label><input type="radio" name="python19" value="b"> B. `float()`</label>
+                        <label><input type="radio" name="python19" value="c"> C. `int()`</label>
+                        <label><input type="radio" name="python19" value="d"> D. `convert_to_int()`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>20. Which argument is used to open a file in **writing** mode (overwriting existing content)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="python20" value="a"> A. `'r'`</label>
+                        <label><input type="radio" name="python20" value="b"> B. `'a'`</label>
+                        <label><input type="radio" name="python20" value="c"> C. `'w'`</label>
+                        <label><input type="radio" name="python20" value="d"> D. `'o'`</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Check Score</button>
+        </form>
+
+    </div>
+
+    <script>
+        const correctAnswers = {
+            'python1': 'b', 'python2': 'b', 'python3': 'c', 'python4': 'd', 'python5': 'b',
+            'python6': 'a', 'python7': 'd', 'python8': 'b', 'python9': 'd', 'python10': 'b',
+            'python11': 'd', 'python12': 'c', 'python13': 'c', 'python14': 'b', 'python15': 'd',
+            'python16': 'b', 'python17': 'c', 'python18': 'b', 'python19': 'c', 'python20': 'c'
+        };
+
+        const form = document.getElementById('quiz-form');
+        const totalQuestions = 20;
+        const pointsPerQuestion = 100 / totalQuestions; 
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let score = 0;
+            let attemptedQuestions = 0;
+
+            for (const [questionName, correctAnswer] of Object.entries(correctAnswers)) {
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                
+                if (selectedOption) {
+                    attemptedQuestions++;
+                    if (selectedOption.value === correctAnswer) {
+                        score += pointsPerQuestion;
+                    }
+                }
+            }
+
+            alert(`Quiz Complete!\n\nYour Score: ${score} out of 100.`);
+        });
+    </script>
+
+</body>
+</html>

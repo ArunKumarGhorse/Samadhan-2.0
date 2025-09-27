@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .question p {
+            font-weight: bold;
+            margin-top: 0;
+            color: #007bff;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            padding: 10px;
+            background-color: #e9e9e9;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .options label:hover {
+            background-color: #dcdcdc;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto 0;
+            padding: 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💻 JavaScript Basics Quiz (20 Questions)</h1>
+        <p style="text-align: center; font-size: 1.1em;">Each question is worth 5 points. You will receive your score out of 100 upon completion!</p>
+
+        <form id="quiz-form">
+            <div class="language-section">
+
+                <div class="question">
+                    <p>1. Which keyword in JavaScript prevents re-declaration and is **block-scoped**?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js1" value="a"> A. `var`</label>
+                        <label><input type="radio" name="js1" value="b"> B. `let`</label>
+                        <label><input type="radio" name="js1" value="c"> C. `const`</label>
+                        <label><input type="radio" name="js1" value="d"> D. `set`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>2. Which of the following is **not** a primitive data type in JavaScript?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js2" value="a"> A. Boolean</label>
+                        <label><input type="radio" name="js2" value="b"> B. Symbol</label>
+                        <label><input type="radio" name="js2" value="c"> C. Object</label>
+                        <label><input type="radio" name="js2" value="d"> D. BigInt</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>3. Which operator is used for **strict equality** (checking both value and type)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js3" value="a"> A. `=`</label>
+                        <label><input type="radio" name="js3" value="b"> B. `==`</label>
+                        <label><input type="radio" name="js3" value="c"> C. `===`</label>
+                        <label><input type="radio" name="js3" value="d"> D. `!=`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>4. Which function definition style **lexically** scopes the `this` keyword?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js4" value="a"> A. Function expression</label>
+                        <label><input type="radio" name="js4" value="b"> B. Function declaration</label>
+                        <label><input type="radio" name="js4" value="c"> C. Arrow function</label>
+                        <label><input type="radio" name="js4" value="d"> D. Lambda function</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>5. In JavaScript, how is a `var` variable **hoisted**?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js5" value="a"> A. Initialization is hoisted, not declaration.</label>
+                        <label><input type="radio" name="js5" value="b"> B. Both declaration and initialization are hoisted.</label>
+                        <label><input type="radio" name="js5" value="c"> C. Declaration is hoisted, but initialization is not.</label>
+                        <label><input type="radio" name="js5" value="d"> D. Hoisting does not apply to `var`.</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>6. Which method is used to add an element to the **end** of an Array?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js6" value="a"> A. `unshift()`</label>
+                        <label><input type="radio" name="js6" value="b"> B. `pop()`</label>
+                        <label><input type="radio" name="js6" value="c"> C. `push()`</label>
+                        <label><input type="radio" name="js6" value="d"> D. `append()`</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>7. If a variable is declared inside a function without `var`, `let`, or `const`, it defaults to being a:</p>
+                    <div class="options">
+                        <label><input type="radio" name="js7" value="a"> A. Local variable</label>
+                        <label><input type="radio" name="js7" value="b"> B. Global variable</label>
+                        <label><input type="radio" name="js7" value="c"> C. Block-scoped variable</label>
+                        <label><input type="radio" name="js7" value="d"> D. `undefined`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>8. What is the output of `typeof NaN`?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js8" value="a"> A. `'undefined'`</label>
+                        <label><input type="radio" name="js8" value="b"> B. `'string'`</label>
+                        <label><input type="radio" name="js8" value="c"> C. `'number'`</label>
+                        <label><input type="radio" name="js8" value="d"> D. `'object'`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>9. Which method is used to remove whitespace from both the beginning and end of a string?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js9" value="a"> A. `strip()`</label>
+                        <label><input type="radio" name="js9" value="b"> B. `removeSpaces()`</label>
+                        <label><input type="radio" name="js9" value="c"> C. `trim()`</label>
+                        <label><input type="radio" name="js9" value="d"> D. `clean()`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>10. Which is the short-hand conditional operator?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js10" value="a"> A. Logical OR (`||`)</label>
+                        <label><input type="radio" name="js10" value="b"> B. Nullish Coalescing (`??`)</label>
+                        <label><input type="radio" name="js10" value="c"> C. Ternary Operator (`? :`)</label>
+                        <label><input type="radio" name="js10" value="d"> D. Equality Operator (`==`)</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>11. Which method is used to listen for a click event on an HTML element?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js11" value="a"> A. `onClick()`</label>
+                        <label><input type="radio" name="js11" value="b"> B. `handleEvent('click', ...)`</label>
+                        <label><input type="radio" name="js11" value="c"> C. `attachEvent('click', ...)`</label>
+                        <label><input type="radio" name="js11" value="d"> D. `addEventListener('click', ...)`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>12. Which loop is commonly used to iterate over the properties (keys) of an **Object**?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js12" value="a"> A. `for (let i = 0; ...)`</label>
+                        <label><input type="radio" name="js12" value="b"> B. `for...of`</label>
+                        <label><input type="radio" name="js12" value="c"> C. `while`</label>
+                        <label><input type="radio" name="js12" value="d"> D. `for...in`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>13. Which object was introduced in ES6 to simplify asynchronous code?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js13" value="a"> A. Callback</label>
+                        <label><input type="radio" name="js13" value="b"> B. Promise</label>
+                        <label><input type="radio" name="js13" value="c"> C. Generator</label>
+                        <label><input type="radio" name="js13" value="d"> D. Worker</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>14. What is the correct way to import an exported function from an ES6 module?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js14" value="a"> A. `require('file.js')`</label>
+                        <label><input type="radio" name="js14" value="b"> B. `import functionName from './file.js';`</label>
+                        <label><input type="radio" name="js14" value="c"> C. `import { functionName } from './file.js';`</label>
+                        <label><input type="radio" name="js14" value="d"> D. `include functionName from 'file.js'`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>15. The value of the **`this`** keyword is determined by:</p>
+                    <div class="options">
+                        <label><input type="radio" name="js15" value="a"> A. It always points to the Global object.</label>
+                        <label><input type="radio" name="js15" value="b"> B. How the function is **called**.</label>
+                        <label><input type="radio" name="js15" value="c"> C. The `var` declaration inside the function.</label>
+                        <label><input type="radio" name="js15" value="d"> D. It is always `undefined`.</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>16. What is the output of `"5" + 2`?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js16" value="a"> A. `7`</label>
+                        <label><input type="radio" name="js16" value="b"> B. `"52"`</label>
+                        <label><input type="radio" name="js16" value="c"> C. Error</label>
+                        <label><input type="radio" name="js16" value="d"> D. `NaN`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>17. A variable that is declared but not assigned a value has the value:</p>
+                    <div class="options">
+                        <label><input type="radio" name="js17" value="a"> A. `null`</label>
+                        <label><input type="radio" name="js17" value="b"> B. `0`</label>
+                        <label><input type="radio" name="js17" value="c"> C. `""`</label>
+                        <label><input type="radio" name="js17" value="d"> D. `undefined`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>18. Which syntax is correct for accessing an object property?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js18" value="a"> A. Only Dot notation (`obj.prop`)</label>
+                        <label><input type="radio" name="js18" value="b"> B. Only Bracket notation (`obj['prop']`)</label>
+                        <label><input type="radio" name="js18" value="c"> C. Both Dot notation and Bracket notation.</label>
+                        <label><input type="radio" name="js18" value="d"> D. `obj->prop`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>19. Which method is used to get an HTML element by its ID?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js19" value="a"> A. `document.querySelector('#id')`</label>
+                        <label><input type="radio" name="js19" value="b"> B. `document.getElementsByTagName('id')`</label>
+                        <label><input type="radio" name="js19" value="c"> C. `document.getElementById()`</label>
+                        <label><input type="radio" name="js19" value="d"> D. `document.getById()`</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>20. Which has **higher** precedence: Logical AND (`&&`) or Logical OR (`||`)?</p>
+                    <div class="options">
+                        <label><input type="radio" name="js20" value="a"> A. Logical OR (`||`)</label>
+                        <label><input type="radio" name="js20" value="b"> B. Logical AND (`&&`)</label>
+                        <label><input type="radio" name="js20" value="c"> C. Both have the same precedence.</label>
+                        <label><input type="radio" name="js20" value="d"> D. It depends on the variable type.</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Check Score</button>
+        </form>
+
+    </div>
+
+    <script>
+        const correctAnswers = {
+            'js1': 'b', 'js2': 'c', 'js3': 'c', 'js4': 'c', 'js5': 'c',
+            'js6': 'c', 'js7': 'b', 'js8': 'c', 'js9': 'c', 'js10': 'c',
+            'js11': 'd', 'js12': 'd', 'js13': 'b', 'js14': 'c', 'js15': 'b',
+            'js16': 'b', 'js17': 'd', 'js18': 'c', 'js19': 'c', 'js20': 'b'
+        };
+
+        const form = document.getElementById('quiz-form');
+        const totalQuestions = 20;
+        const pointsPerQuestion = 100 / totalQuestions; 
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let score = 0;
+            let attemptedQuestions = 0;
+
+            for (const [questionName, correctAnswer] of Object.entries(correctAnswers)) {
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                
+                if (selectedOption) {
+                    attemptedQuestions++;
+                    if (selectedOption.value === correctAnswer) {
+                        score += pointsPerQuestion;
+                    }
+                }
+            }
+
+            alert(`Quiz Complete!\n\nYour Score: ${score} out of 100.`);
+        });
+    </script>
+
+</body>
+</html>

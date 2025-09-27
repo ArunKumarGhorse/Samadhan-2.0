@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydra - Hackathon Edition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="navbar-logo" onclick="navigate('home-screen')">
+            <svg id="hydra-logo" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="hydra-linear-gradient" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#00bcd4"/>
+                        <stop offset="100%" stop-color="#2a91e5"/>
+                    </linearGradient>
+                </defs>
+                <path class="hydra-shield-fill" d="M50 0 L10 20 L10 80 L50 100 L90 80 L90 20 Z"/>
+                <path class="hydra-circuit-line" d="M15 25 L35 25 M65 25 L85 25 M15 75 L35 75 M65 75 L85 75"/>
+                <circle class="hydra-circuit-line" cx="25" cy="25" r="3"/>
+                <circle class="hydra-circuit-line" cx="75" cy="25" r="3"/>
+                <circle class="hydra-circuit-line" cx="25" cy="75" r="3"/>
+                <circle class="hydra-circuit-line" cx="75" cy="75" r="3"/>
+                <path class="hydra-accent-glow" d="M50 30 C40 30 35 45 35 55 C35 70 50 80 50 80 C50 80 65 70 65 55 C65 45 60 30 50 30 Z"/>
+                <text x="41" y="60" class="hydra-text">H</text>
+            </svg>
+            <span class="logo-text">HYDRA</span>
+        </a>
+        <nav class="navbar-links">
+            <button class="nav-button" data-screen="home-screen"><a href="">Home</a></button>
+            
+            
+            
+            
+            <button class="nav-button" data-screen="lessons-screen"><a href="">Learn</a></button>
+            <button class="nav-button" ><a href="contact.html">Contact Us</a></button>
+            
+            <button class="nav-button" ><a href="jsquiz.html">JS Quiz </a></button>
+            <button class="nav-button" ><a href="pyquiz.html">PY Quiz </a></button>
+            <button class="nav-button" ><a href="login.html">Login</a></button>
+               </nav>
+        <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </header>
+
+    <main id="home-screen" class="screen">
+        <section class="hero-section">
+            <h1>Build your own website with </h1>
+            <b><h1><p id="H">HYDRA AI⚡</p></h1></b>
+            <p>The fastest way to go from idea to deployed app. Use our powerful IDE or simply describe your vision, and we'll generate the initial code for you.</p>
+
+            <div class="generator-area" style="left: auto;">
+                <p class="generator-header">✨ Describe your website idea below:</p>
+                <textarea id="prompt-input" placeholder="e.g... A dark-themed UX portfolio with smooth scrolling and interactive image effects.."></textarea>
+                <button class="btn-secondary" id="generate-btn">Generate Website</button>
+                
+                <pre id="prompt-output" class="generator-output"></pre>
+            </div>
+        </section>
+    </main>
+
+    <div id="editor-screen" class="screen">
+        <aside class="editor-sidebar">
+            <h3>Project Files</h3>
+            <p class="file-active">main.html</p>
+            <p>style.css</p>
+            <p>script.js</p>
+        </aside>
+
+        <section class="editor-main">
+            <textarea id="code-editor-area" placeholder="// Start coding your project here...">
+// Welcome to the Hydra Editor!
+// This UI is perfect for your Hackathon project.
+// The white light hover animation on buttons looks great!
+
+function hackathonWin() {
+    console.log("Good luck with your presentation!");
+}
+hackathonWin();
+            </textarea>
+        </section>
+
+        <aside class="editor-output">
+            <h3>Console Output</h3>
+            <pre class="console-text">
+> Running Project...
+Good luck with your presentation!
+</pre>
+        </aside>
+    </div>
+
+    <div id="lessons-screen" class="screen">
+        <h2>Start Your Coding Journey with Hydra 🧠</h2>
+
+        <div  class="language-grid">
+            <article class="language-card">
+                <h3>Python Fundamentals</h3>
+                <div class="quiz-section">
+                    <div class="channel-link-container">
+                        <p>💡Learn | Quiz | Build</p>
+                        <iframe width="400" height="300"
+                                  src="https://www.youtube.com/embed/t2_Q2BRzeEE?list=PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0"
+                                  title="YouTube video player" frameborder="0"
+                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowfullscreen>
+                        </iframe>
+                        <br>
+                        <a href="https://www.youtube.com/embed/t2_Q2BRzeEE?list=PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0" target="_blank">Python Course !</a>
+                    </div>
+                    <button class="btn-primary quiz-button" onclick="window.location.href='pyquiz.html'">Start Quiz</button>
+                </div>
+            </article>
+
+            <article class="language-card">
+                <h3>JavaScript Essentials</h3>
+
+                <div class="quiz-section">
+                    <div class="channel-link-container">
+                        <p>💡Learn | Quiz | Build</p>
+                        <iframe width="400" height="315"
+                                  src="https://www.youtube.com/embed/ajdRvxDWH4w?list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW"
+                                  title="YouTube video player" frameborder="0"
+                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  allowfullscreen>
+                        </iframe>
+                        <br>
+                        <a href="https://www.youtube.com/embed/ajdRvxDWH4w?list=PLGjplNEQ1it_oTvuLRNqXfz_v_0pq6unW" target="_blank">JavaScript course !</a>
+                    </div>
+                    <button class="btn-primary quiz-button" onclick="window.location.href='jsquiz.html'">Start Quiz</button>
+                </div>
+            </article>
+            
+            </div>
+    </div>
+    <footer style="text-align: center;"> © 2025 @hydra. All rights reserved. </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
