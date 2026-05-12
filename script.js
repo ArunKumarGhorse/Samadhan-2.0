@@ -49,7 +49,7 @@ toggle.addEventListener('change', () => {
 
 
 async function generateCode(prompt) {
-    const apiKey = 'AIzaSyCuTXaSWgNjIDPilhdw1izFkFz7ro64TVk'; // Provided Gemini API key
+    const apiKey = '..'; //API key
     const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent', {
         method: 'POST',
         headers: {
